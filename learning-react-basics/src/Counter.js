@@ -5,15 +5,17 @@ const Counter = () => {
     
   let [count,setCount] = useState(0);
   let [time,setTime] = useState(0);
-  useEffect(() => {
-    const interval = setInterval(() => {
-        setTime(time+1);
-    }, 1000);
+
+
+//   useEffect(() => {
+//     const interval = setInterval(() => {
+//         setTime(time+1);
+//     }, 1000);
   
-    return () => {
-      clearInterval(time)
-    }
-  }, [time])
+//     return () => {
+//       clearInterval(time)
+//     }
+//   }, [time])
 
   const stopTimer = () => {
     setTime(0);
