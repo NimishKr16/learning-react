@@ -1,39 +1,36 @@
-import React, { Fragment, useEffect, useState } from 'react'
+import React, { Fragment, useEffect, useState } from "react";
 
-import Disp from './Disp';
+import Disp from "./Disp";
 const Counter = () => {
-    
-  let [count,setCount] = useState(0);
-  let [time,setTime] = useState(0);
+  let [count, setCount] = useState(0);
 
+  let myStyle = {
+    color: "red",
+    backgroundColor: "black",
+    padding: "10px",
+  };
 
-//   useEffect(() => {
-//     const interval = setInterval(() => {
-//         setTime(time+1);
-//     }, 1000);
-  
-//     return () => {
-//       clearInterval(time)
-//     }
-//   }, [time])
+  let myStyle2 = {
+    color: "green",
+    backgroundColor: "lightblue",
+    padding: "10px",
+    marginTop: "20px",
+  };
 
-  const stopTimer = () => {
-    setTime(0);
-    clearInterval(time);
-  }
   return (
     <>
-    <div>
-      <h1 className='text-red'>{count}</h1>
-      <button onClick={()=>setCount(count+1)}>Increment</button>
-      <Disp text='Hello'></Disp>
-      <h1>{time}</h1>
-      <button onClick={stopTimer}>reset timer</button>
-      
-    </div>
+      <div>
+        <div style={myStyle}>
+          <h1>THIS IS A COUNTER COMPONENT</h1>
+          <h1 className="text-red">{count}</h1>
+          <button onClick={() => setCount(count + 1)}>Increment</button>
+        </div>
+        <div style={myStyle2}>
+          <Disp text="Hello from Disp Component using Props"></Disp>
+        </div>
+      </div>
     </>
-  )
-}
-
+  );
+};
 
 export default Counter;
