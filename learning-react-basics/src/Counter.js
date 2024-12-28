@@ -24,6 +24,8 @@ const Counter = () => {
           <h1>THIS IS A COUNTER COMPONENT</h1>
           <h1 className="text-red">{count}</h1>
           <button onClick={() => setCount(count + 1)}>Increment</button>
+          <br />
+          <button onClick={() => setCount(0)}>Reset to 0</button>
         </div>
         <div style={myStyle2}>
           <Disp text="Hello from Disp Component using Props"></Disp>
