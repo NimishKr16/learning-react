@@ -4,6 +4,7 @@ import Counter from './Counter';
 import SimpleForm from './SimpleForm';
 import Timer from './Timer';
 import MouseT from './MouseT';
+import Memo from './Memo';
 
 const App = () => {
   return (
@@ -16,6 +17,7 @@ const App = () => {
           Mouse Position: {x}, {y}
         </h1>
       )}></MouseT>
+      <Memo></Memo>
     </div>
   );
 }
